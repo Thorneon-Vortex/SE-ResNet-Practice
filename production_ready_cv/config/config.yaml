@@ -1,0 +1,24 @@
+# 训练超参数配置
+train:
+  batch_size: 64
+  epochs: 100
+  learning_rate: 0.1
+  num_workers: 4
+  device: "auto" # "auto", "cuda", "mps", "cpu"
+
+# 模型配置
+model:
+  num_classes: 10
+  dropout: 0.5
+
+# 数据配置
+data:
+  dataset_name: "CIFAR10"
+  root: "./data"
+  download: true
+
+# 日志与保存配置
+logging:
+  log_dir: "projects/production_ready_cv/logs"
+  checkpoint_dir: "projects/production_ready_cv/checkpoints"
+  save_freq: 5 # 每隔多少个 epoch 保存一次

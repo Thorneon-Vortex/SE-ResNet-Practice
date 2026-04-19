@@ -1,0 +1,17 @@
+data:
+  dataset_name: CIFAR10
+  download: true
+  root: ./data
+logging:
+  checkpoint_dir: projects/resnet_magic_modify/checkpoints
+  log_dir: projects/resnet_magic_modify/logs/original
+  save_freq: 5
+model:
+  dropout: 0.5
+  num_classes: 10
+train:
+  batch_size: 128
+  device: auto
+  epochs: 100
+  learning_rate: 0.001
+  num_workers: 4
